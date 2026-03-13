@@ -1,0 +1,593 @@
+@font-face {
+    font-family: Main;
+    src: url("../Fonts/Inter/Inter-VariableFont_opsz,wght.ttf");
+}
+
+html {
+    scrollbar-gutter: stable;
+}
+
+body {
+    margin: 0;
+    background-color: white;
+    font-family: Main;
+}
+
+.NavBar{
+    position: sticky;
+    top: 0;
+    margin-top: 0;
+    background-color: #131A47;
+    font-family: "Gill Sans MT";
+    padding: 15px;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.5);
+    z-index: 100;
+}
+
+.NavBar-Element a{
+    text-decoration: none;
+    color: #ffffff;
+    display: inline-block;
+    position: relative;
+    margin: 0;
+    font-size: 18px;
+}
+
+.NavBar-Element a:after{
+    content: "";
+    position: absolute;
+    background-color: #a7c6ed;
+    height: 3px;
+    width: 100%;
+    left: 0;
+    bottom: -8px;
+    border-radius: 3px;
+    transform: scaleX(0);
+    transform-origin: center;
+    transition: 0.3s ease-in-out;
+}
+
+.NavBar-Element a:hover:after{
+    transform: scaleX(1);
+}
+
+.NavBar-Consultation {
+    font-weight: bold;
+    background-color: #F28950;
+    margin-left: 20px;
+    padding: 10px 15px;
+    border-radius: 8px;
+    transition: 0.3s ease-in-out;
+}
+
+.NavBar-Consultation:hover {
+    background-color: #E67D39;
+}
+
+.NavBar-Consultation a{
+    text-decoration: none;
+    display: inline-block;
+    margin: 0;
+    color: #ffffff;
+    font-size: 20px;
+}
+
+.NavBar-Home{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.NavBar-Home a {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    margin: 0;
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.NavBar-Home img {
+    height: 50px;
+    width: auto;
+}
+
+.Header{
+    height: 550px;
+    padding-bottom: 100px;
+    background-color: #131A47;
+    align-content: center;
+    text-align: center;
+}
+
+.Header h1{
+    margin: 0;
+    padding: 30px;
+    font-size: 80px;
+    color: #ffffff;
+}
+
+.Header p{
+    margin: 0;
+    padding: 10px;
+    font-size: 30px;
+    color: #ffffff;
+}
+
+.Footer{
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+    padding: 100px 200px;
+    background-color: #2B2B2B;
+}
+
+.Footer-Column{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    gap: 10px;
+    width: 100%;
+}
+
+.Footer-Column a{
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 20px;
+    padding: 8px 0;
+    transition: 0.3s ease-in-out;
+}
+
+.Footer-Column a:hover{
+    text-decoration: solid #ffffff underline;
+}
+
+.Footer-Column-Title{
+    margin: 0;
+    margin-bottom: 15px;
+    color: #ffffff;
+    font-size: 32px;
+    font-weight: bolder;
+}
+
+.Footer-Column-Location{
+    margin-top: 15px;
+    margin-bottom: 0;
+    color: #ffffff;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.Footer-Column-Phone{
+    margin: 0;
+    margin-bottom: 10px;
+    color: #ffffff;
+    font-size: 24px;
+    font-weight: bold;
+}
+.Footer-Column-Text{
+    margin: 0;
+    color: #ffffff;
+    font-size: 18px;
+}
+
+.Footer-Column img{
+    height: 40px;
+    width: 40px;
+
+}
+
+.Footer-Column-Social{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 5px;
+    gap: 10px;
+}
+
+#NewReview-Container{
+    margin: 15%;
+    margin-top: -100px;
+    margin-bottom: 0;
+}
+
+#NewReview-Box{
+    padding: 50px 100px;
+    border-radius: 15px;
+    background-color: #386ABA;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+}
+
+#NewReview-Box h1{
+    margin: 0;
+    margin-bottom: 60px;
+    text-align: center;
+    color: white;
+    font-size: 60px;
+    font-weight: bold;
+}
+
+#NewReview-Box p{
+    margin-bottom: 5px;
+    margin-top: 20px;
+    color: white;
+    font-size: 20px;
+    font-weight: normal;
+}
+
+.NewReview-Box-Name-Row{
+    display: flex;
+    flex-direction: row;
+    gap: 100px;
+}
+
+.NewReview-Box-Name{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.NewReview-Box-Name label{
+    margin-bottom: 10px;
+    margin-left: 5px;
+    font-size: 20px;
+    font-family: Main;
+    color: white;
+}
+
+.NewReview-Box-Name input{
+    margin-bottom: 20px;
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    width: 100%;
+}
+
+.NewReview-Box-Message label{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+    font-size: 20px;
+    font-family: Main;
+    color: white;
+}
+
+.NewReview-Box-Message textarea{
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    resize: none;
+    width: 100%;
+}
+
+#Rating-Container{
+    margin-bottom: 30px;
+    font-size: 30px;
+    font-weight: 700;
+}
+
+#Rating-Container label{
+   color: #FFBE00;
+}
+
+#Rating-Container input{
+    display: none;
+}
+
+#Rating-Container input + label{
+    cursor: pointer;
+}
+
+#Rating-Container input:checked + label ~ label{
+    color: rgb(10,10,10,0.6);
+}
+
+#NewReview-Box-Submit{
+    display: flex;
+    justify-content: center;
+    margin-top: 60px;
+    margin-bottom: 30px;
+}
+
+#ReviewSubmit {
+    padding: 18px 22px;
+    border-radius: 15px;
+    background-color: #F28950;
+    color: #ffffff;
+    border: none;
+    font-size: 20px;
+    font-weight: bold;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+    cursor: pointer;
+    transition: 0.5s ease-in-out;
+}
+
+#ReviewSubmit:hover {
+    background-color: #E67D39;
+}
+
+#Reviews-Container{
+    padding: 150px 15%;
+}
+
+#Reviews-Box{
+    padding: 75px 150px;
+    border-radius: 15px;
+    background-color: #386ABA;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+}
+
+#Reviews-Box h1{
+    margin: 0;
+    margin-bottom: 40px;
+    text-align: center;
+    font-size: 60px;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+#Reviews-Box-Content {
+    border: 2px solid rgb(0,0,0,0.3);
+    padding: 75px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    background-color: #ffffff;
+}
+
+#Reviews-Box-Content h1{
+    text-align: left;
+    margin-bottom: 10px;
+    color: #0E1B3D;
+    font-size: 30px;
+}
+
+#Reviews-Box-Content p{
+    margin: 0;
+    font-size: 17px;
+}
+
+#Reviews-Box-Content span{
+    font-size: 30px;
+    font-weight: 700;
+}
+
+#Reviews-Box-Content-Message{
+    color: #0E1B3D;
+    line-height: 1.6;
+    max-width: 1000px;
+    margin: 20px auto;
+}
+
+#Consultation-Container{
+    margin: 150px 15%;
+    margin-top: -100px;
+}
+
+#Consultation-Box{
+    padding: 80px 40px;
+    border-radius: 15px;
+    background-color: #386ABA;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+}
+
+
+#Consultation-Form {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 50px;
+    margin-bottom: 20px;
+}
+
+.Consultation-Page-Split {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.Consultation-Box-Name{
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+    margin-bottom: 5px;
+    color: white;
+    font-size: 20px;
+    font-weight: normal;
+}
+
+.Consultation-Box-Name-Wrapper{
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    min-width: 150px;
+}
+
+.Consultation-Box-Name label{
+    margin-bottom: 10px;
+}
+
+.Consultation-Box-Name input{
+    margin-bottom: 20px;
+    padding: 10px;
+    box-sizing: border-box;
+    width: 100%;
+    border-radius: 10px;
+    border: none;
+}
+
+#Consultation-Page-Message{
+    margin-bottom: 10px;
+    color: white;
+    font-size: 20px;
+    font-weight: normal;
+}
+
+#Consultation-Box textarea{
+    resize: none;
+    width: 100%;
+    height: 100%;
+    margin-bottom: 20px;
+    padding: 10px 10px 0 0;
+    border-radius: 10px;
+    border: none;
+    font-family: Georgia;
+}
+
+#Consultation-Box-Lawtype{
+    display: flex;
+    flex-direction: column;
+}
+
+#Consultation-Box-Lawtype label{
+    margin-bottom: 10px;
+    color: white;
+    font-size: 20px;
+    font-weight: normal;
+}
+
+#Consultation-Box-Lawtype select{
+    margin-bottom: 20px;
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    width: 150px;
+}
+
+#Consultation-Box-Submit {
+    display: flex;
+    justify-content: center;
+    margin-top: 75px;
+}
+
+#Consultation-Box-Submit-Button{
+    padding: 18px 22px;
+    border-radius: 15px;
+    background-color: #F28950;
+    color: #ffffff;
+    border: none;
+    font-size: 20px;
+    font-weight: bold;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+    cursor: pointer;
+    transition: 0.5s ease-in-out;
+}
+
+#Consultation-Box-Submit-Button:hover {
+    background-color: #E67D39;
+}
+
+#Team-Container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    justify-items: center;
+    gap:100px 50px;
+    padding: 150px 15%;
+}
+
+.Team-Box{
+    display: flex;
+    flex-direction: column;
+    width: 270px;
+    text-align: center;
+}
+
+.Team-Box img{
+    aspect-ratio: 1 / 1;
+    border-radius: 50%;
+}
+
+.Team-Box-Name{
+    margin: 15px;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.Team-Box-Law{
+    margin: 0;
+    font-size: 16px;
+    color: #303030;
+}
+
+#Pricing-Container{
+    margin: 150px 9%;
+    margin-top: -100px;
+    margin-bottom: 150px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+    justify-content: center;
+    gap: 120px;
+}
+
+.Pricing-Box{
+    display: flex;
+    flex-direction: column;
+    transition: 0.5s ease-in-out;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+    border-radius: 15px
+}
+
+.Pricing-Box:hover{
+    transform: scale(107%);
+    box-shadow: 0 5px 20px rgba(0,0,0,0.4);
+}
+
+.Pricing-Box-Header{
+    border-radius: 15px 15px 0 0;
+    background-color: #386ABA;
+    padding: 30px 50px;
+    text-align: center;
+    color: #ffffff;
+}
+
+.Pricing-Box-Body{
+    border-radius: 0 0 15px 15px;
+    padding: 50px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.Pricing-Box-Title{
+    margin: 0;
+    font-size: 45px;
+    font-weight: bold;
+}
+
+.Pricing-Box-Type{
+    margin: 0;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.Pricing-Box-Info{
+    margin: 0 0 30px 0;
+    font-size: 19px;
+}
+
+.Pricing-Box-Includes{
+    margin: 0 0 20px 0;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.Pricing-Box-Points{
+    margin: 0 0 20px 0;
+    font-size: 19px;
+
+}
+
+.Pricing-Box-Price{
+    margin-top: auto;
+    padding: 20px;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: end;
+}

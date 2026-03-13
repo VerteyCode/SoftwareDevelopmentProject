@@ -1,0 +1,143 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Consultations</title>
+    <link rel="stylesheet" href="{% static 'CSS/styles.css' %}">
+</head>
+<body>
+<div class="NavBar">
+    <div class="NavBar-Home">
+         <a href="{% url 'LandingPage' %}" >
+             Nautilus Law
+             <img class="HomePageIcon" src="{% static 'images/homeButton.png' %}" alt="Home">
+         </a>
+    </div>
+    <div class="NavBar-Element">
+         <a href="{% url 'MainPage' %}" >
+             Home
+         </a>
+    </div>
+    <div class="NavBar-Element">
+         <a href="{% url 'ReviewPage' %}" >
+             Reviews
+         </a>
+    </div>
+    <div class="NavBar-Element">
+         <a href="{% url 'TeamPage' %}" >
+             Team
+         </a>
+    </div>
+    <div class="NavBar-Element">
+         <a href="{% url 'PricingPage' %}" >
+             Pricing
+         </a>
+    </div>
+    <div class="NavBar-Consultation">
+         <a href="{% url 'ConsultationPage' %}" >
+             Make a Consultation
+         </a>
+    </div>
+</div>
+<div class="Header">
+    <h1>Make a Consultation</h1>
+    <p>Our team is made up of the top quality industry leaders</p>
+    <p>With years of experience in a multitude of legal areas, we know how to win a case</p>
+</div>
+<div id="Consultation-Container">
+    <div id="Consultation-Box">
+        <form method="POST" action="">
+            {% csrf_token %}
+            <div id="Consultation-Form">
+                <div class="Consultation-Page-Split">
+                    <div id="Consultation-Box-Info">
+                        <div class="Consultation-Box-Name">
+                            <div class="Consultation-Box-Name-Wrapper">
+                                <label for="firstname">First Name*</label>
+                                <input id="firstname" type="text" name="firstname" placeholder="e.g. John" required>
+                            </div>
+                            <div class="Consultation-Box-Name-Wrapper">
+                                <label for="lastname">Last Name*</label>
+                                <input id="lastname" type="text" name="lastname" placeholder="e.g. Doe" required>
+                            </div>
+                        </div>
+                        <div class="Consultation-Box-Name">
+                            <div class="Consultation-Box-Name-Wrapper">
+                                <label for="email">Email*</label>
+                                <input id="email" type="email" name="email" placeholder="e.g. JohnDoe@nautilus.com" required>
+                            </div>
+                            <div class="Consultation-Box-Name-Wrapper">
+                                <label for="phone">Phone Number*</label>
+                                <input id="phone" type="text" name="phone" placeholder="e.g. 07563 23457" required>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="Consultation-Box-Lawtype">
+                        <label for="lawtype">Type of Law</label>
+                        <select id="lawtype" name="lawType">
+                            <option value="Civil Law">Civil Law</option>
+                            <option value="Criminal Law">Criminal Law</option>
+                            <option value="Property Law">Property Law</option>
+                            <option value="Employment Law">Employment Law</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="Consultation-Page-Split">
+                    <label id="Consultation-Page-Message" for="message">Message</label>
+                    <textarea name="message" id="message" cols="200" rows="10" placeholder="(optional)&#10;All information is kept secure and private.&#10;Information regarding the consultation improves support and response"></textarea>
+                </div>
+            </div>
+            <div id="Consultation-Box-Submit">
+                <button id="Consultation-Box-Submit-Button" type="submit">Send Consultation</button>
+            </div>
+        </form>
+    </div>
+</div>
+<div class="Footer">
+    <div class="Footer-Column">
+        <p class="Footer-Column-Title">Social Media</p>
+        <div class="Footer-Column-Social">
+            <img src="{% static 'images/in.png' %}">
+            <p class="Footer-Column-Text">@NautilusLaw</p>
+        </div>
+        <div class="Footer-Column-Social">
+            <img src="{% static 'images/fb.png' %}">
+            <p class="Footer-Column-Text">@NautilusLaw</p>
+        </div>
+        <div class="Footer-Column-Social">
+            <img src="{% static 'images/x.png' %}">
+            <p class="Footer-Column-Text">@NautilusLaw</p>
+        </div>
+        <div class="Footer-Column-Social">
+            <img src="{% static 'images/insatgram.png' %}">
+            <p class="Footer-Column-Text">@NautilusLaw</p>
+        </div>
+    </div>
+    <div class="Footer-Column">
+        <p class="Footer-Column-Title">Links</p>
+        <a href="{% url 'MainPage' %}" >Home</a>
+        <a href="{% url 'LandingPage' %}" >About Us</a>
+        <a href="{% url 'ReviewPage' %}" >Reviews</a>
+        <a href="{% url 'TeamPage' %}" >Team</a>
+        <a href="{% url 'PricingPage' %}" >Pricing</a>
+        <a href="{% url 'ConsultationPage' %}" >Consultation</a>
+    </div>
+    <div class="Footer-Column">
+        <p class="Footer-Column-Title">Locations</p>
+        <p class="Footer-Column-Location">London</p>
+        <p class="Footer-Column-Text">41 Thomas More St<br>E1W 1YY</p>
+        <p class="Footer-Column-Location">Manchester</p>
+        <p class="Footer-Column-Text">House, Bridge St<br>M3 3BN</p>
+        <p class="Footer-Column-Location">Birmingham</p>
+        <p class="Footer-Column-Text">210 High St, Harborne<br>B17 9PP</p>
+    </div>
+    <div class="Footer-Column">
+        <p class="Footer-Column-Title">Contacts</p>
+        <p class="Footer-Column-Text">24/7 Help line:</p>
+        <p class="Footer-Column-Phone">+44 7464 57844</p>
+        <p class="Footer-Column-Text">consultations@nautiluslaw.com</p>
+    </div>
+</div>
+</body>
+</html>

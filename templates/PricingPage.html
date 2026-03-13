@@ -1,0 +1,150 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Pricing</title>
+    <link rel="stylesheet" href="{% static 'CSS/styles.css' %}">
+</head>
+<body>
+<div class="NavBar">
+    <div class="NavBar-Home">
+         <a href="{% url 'LandingPage' %}" >
+             Nautilus Law
+             <img class="HomePageIcon" src="{% static 'images/homeButton.png' %}" alt="Home">
+         </a>
+    </div>
+    <div class="NavBar-Element">
+         <a href="{% url 'MainPage' %}" >
+             Home
+         </a>
+    </div>
+    <div class="NavBar-Element">
+         <a href="{% url 'ReviewPage' %}" >
+             Reviews
+         </a>
+    </div>
+    <div class="NavBar-Element">
+         <a href="{% url 'TeamPage' %}" >
+             Team
+         </a>
+    </div>
+    <div class="NavBar-Element">
+         <a href="{% url 'PricingPage' %}" >
+             Pricing
+         </a>
+    </div>
+    <div class="NavBar-Consultation">
+         <a href="{% url 'ConsultationPage' %}" >
+             Make a Consultation
+         </a>
+    </div>
+</div>
+<div class="Header">
+    <h1>Here Are Our Pricing Schemes</h1>
+    <p>Our team is made up of the top quality industry leaders</p>
+    <p>With years of experience in a multitude of legal areas, we know how to win a case</p>
+</div>
+<div id="Pricing-Container">
+    <div class="Pricing-Box">
+        <div class="Pricing-Box-Header">
+            <p class="Pricing-Box-Title">Basic</p>
+            <p class="Pricing-Box-Type">Flexible Rates</p>
+        </div>
+        <div class="Pricing-Box-Body">
+            <p class="Pricing-Box-Info">Flexible plan for those who need legal help for short periods of time with no fixed contracts.</p>
+            <p class="Pricing-Box-Includes">Includes:</p>
+            <ul>
+                <li class="Pricing-Box-Points">Legal advice from our team</li>
+                <li class="Pricing-Box-Points">Calls for immediate help</li>
+                <li class="Pricing-Box-Points">Best for small projects or events</li>
+            </ul>
+            <p class="Pricing-Box-Price">Typically £450/Day</p>
+        </div>
+    </div>
+    <div class="Pricing-Box">
+        <div class="Pricing-Box-Header">
+            <p class="Pricing-Box-Title">Standard</p>
+            <p class="Pricing-Box-Type">Monthly Payments</p>
+        </div>
+        <div class="Pricing-Box-Body">
+            <p class="Pricing-Box-Info">The standard plan for small businesses or start up companies looking for legal assistance.</p>
+            <p class="Pricing-Box-Includes">Includes:</p>
+            <ul>
+                <li class="Pricing-Box-Points">24/7 legal advice</li>
+                <li class="Pricing-Box-Points">1 on 1 or team meetings</li>
+                <li class="Pricing-Box-Points">Higher Priority from senior staff</li>
+                <li class="Pricing-Box-Points">12 month subscription</li>
+                <li class="Pricing-Box-Points">Best for intimidate companies</li>
+            </ul>
+            <p class="Pricing-Box-Price">£750/Month</p>
+        </div>
+    </div>
+    <div class="Pricing-Box">
+        <div class="Pricing-Box-Header">
+            <p class="Pricing-Box-Title">Premium</p>
+            <p class="Pricing-Box-Type">Quarterly Contract</p>
+        </div>
+        <div class="Pricing-Box-Body">
+            <p class="Pricing-Box-Info">The premium plan for high level individuals and large scale businesses needing the best quality legal protection.</p>
+            <p class="Pricing-Box-Includes">Includes:</p>
+            <ul>
+                <li class="Pricing-Box-Points">24/7 dedicated team member for your firm</li>
+                <li class="Pricing-Box-Points">Weekly reports and meetings</li>
+                <li class="Pricing-Box-Points">Top Priority issues</li>
+                <li class="Pricing-Box-Points">Overseen by senior legal department</li>
+                <li class="Pricing-Box-Points">Quarterly fees</li>
+                <li class="Pricing-Box-Points">Amount is based of an assessment during consultation</li>
+                <li class="Pricing-Box-Points">Best for high-end firms and public figures</li>
+            </ul>
+            <p class="Pricing-Box-Price">Discussion - Paid Quarterly</p>
+        </div>
+    </div>
+</div>
+<div class="Footer">
+    <div class="Footer-Column">
+        <p class="Footer-Column-Title">Social Media</p>
+        <div class="Footer-Column-Social">
+            <img src="{% static 'images/in.png' %}">
+            <p class="Footer-Column-Text">@NautilusLaw</p>
+        </div>
+        <div class="Footer-Column-Social">
+            <img src="{% static 'images/fb.png' %}">
+            <p class="Footer-Column-Text">@NautilusLaw</p>
+        </div>
+        <div class="Footer-Column-Social">
+            <img src="{% static 'images/x.png' %}">
+            <p class="Footer-Column-Text">@NautilusLaw</p>
+        </div>
+        <div class="Footer-Column-Social">
+            <img src="{% static 'images/insatgram.png' %}">
+            <p class="Footer-Column-Text">@NautilusLaw</p>
+        </div>
+    </div>
+    <div class="Footer-Column">
+        <p class="Footer-Column-Title">Links</p>
+        <a href="{% url 'MainPage' %}" >Home</a>
+        <a href="{% url 'LandingPage' %}" >About Us</a>
+        <a href="{% url 'ReviewPage' %}" >Reviews</a>
+        <a href="{% url 'TeamPage' %}" >Team</a>
+        <a href="{% url 'PricingPage' %}" >Pricing</a>
+        <a href="{% url 'ConsultationPage' %}" >Consultation</a>
+    </div>
+    <div class="Footer-Column">
+        <p class="Footer-Column-Title">Locations</p>
+        <p class="Footer-Column-Location">London</p>
+        <p class="Footer-Column-Text">41 Thomas More St<br>E1W 1YY</p>
+        <p class="Footer-Column-Location">Manchester</p>
+        <p class="Footer-Column-Text">House, Bridge St<br>M3 3BN</p>
+        <p class="Footer-Column-Location">Birmingham</p>
+        <p class="Footer-Column-Text">210 High St, Harborne<br>B17 9PP</p>
+    </div>
+    <div class="Footer-Column">
+        <p class="Footer-Column-Title">Contacts</p>
+        <p class="Footer-Column-Text">24/7 Help line:</p>
+        <p class="Footer-Column-Phone">+44 7464 57844</p>
+        <p class="Footer-Column-Text">consultations@nautiluslaw.com</p>
+    </div>
+</div>
+</body>
+</html>

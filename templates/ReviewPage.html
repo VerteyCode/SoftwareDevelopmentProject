@@ -1,0 +1,153 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Reviews</title>
+    <link rel="stylesheet" href="{% static 'CSS/styles.css' %}">
+</head>
+<body>
+<div class="NavBar">
+    <div class="NavBar-Home">
+         <a href="{% url 'LandingPage' %}" >
+             Nautilus Law
+             <img class="HomePageIcon" src="{% static 'images/homeButton.png' %}" alt="Home">
+         </a>
+    </div>
+    <div class="NavBar-Element">
+         <a href="{% url 'MainPage' %}" >
+             Home
+         </a>
+    </div>
+    <div class="NavBar-Element">
+         <a href="{% url 'ReviewPage' %}" >
+             Reviews
+         </a>
+    </div>
+    <div class="NavBar-Element">
+         <a href="{% url 'TeamPage' %}" >
+             Team
+         </a>
+    </div>
+    <div class="NavBar-Element">
+         <a href="{% url 'PricingPage' %}" >
+             Pricing
+         </a>
+    </div>
+    <div class="NavBar-Consultation">
+         <a href="{% url 'ConsultationPage' %}" >
+             Make a Consultation
+         </a>
+    </div>
+</div>
+<div class="Header">
+    <h1>What Our Clients Think</h1>
+    <p>We prioritise customer satisfaction and results</p>
+    <p>Here is what our clients have to say</p>
+</div>
+<div id="NewReview-Container">
+    <div id="NewReview-Box">
+        <h1>Write A Review</h1>
+        <form method="POST" action="">
+            {% csrf_token %}
+            <div class="NewReview-Box-Name-Row">
+                <div class="NewReview-Box-Name">
+                    <label for="firstname">First Name*</label>
+                    <input type="text" id="firstname" name="firstname"placeholder="e.g. John" required>
+                </div>
+                <div class="NewReview-Box-Name">
+                    <label for="lastname">Last Name*</label>
+                    <input type="text" id="lastname" name="lastname"placeholder="e.g. Doe" required>
+                </div>
+            </div>
+            <div id="Rating-Container">
+                <p>Your Rating:</p>
+                <input type="radio" id="1star" name="rating" value="1">
+                <label for="1star">★</label>
+                <input type="radio" id="2star" name="rating" value="2">
+                <label for="2star">★</label>
+                <input type="radio" id="3star" name="rating" value="3">
+                <label for="3star">★</label>
+                <input type="radio" id="4star" name="rating" value="4">
+                <label for="4star">★</label>
+                <input type="radio" id="5star" name="rating" value="5" checked>
+                <label for="5star">★</label>
+            </div>
+            <div class="NewReview-Box-Message">
+                <label id="NewReview-Box-Message" for="message">Tell Us Your Thoughts</label>
+                <textarea name="message" id="message" cols="200" rows="10"></textarea>
+            </div>
+            <div id="NewReview-Box-Submit">
+                <button id="ReviewSubmit" type="submit">Submit Review</button>
+            </div>
+        </form>
+    </div>
+</div>
+<div id="Reviews-Container">
+    <div id="Reviews-Box">
+    <h1>What Others Think</h1>
+
+        {% for review in NautilusReview %}
+                <div id="Reviews-Box-Content">
+                    <h1>{{ review.firstname }} {{ review.lastname }}</h1>
+                    <span>
+                        {% if review.rating|add:"0" >= 1 %}<span style="color: #FFBE00">&#9733;</span>{% else %}<span style="color: rgb(10,10,10,0.6)">&#9733;</span>{% endif %}
+                        {% if review.rating|add:"0" >= 2 %}<span style="color: #FFBE00">&#9733;</span>{% else %}<span style="color: rgb(10,10,10,0.6)">&#9733;</span>{% endif %}
+                        {% if review.rating|add:"0" >= 3 %}<span style="color: #FFBE00">&#9733;</span>{% else %}<span style="color: rgb(10,10,10,0.6)">&#9733;</span>{% endif %}
+                        {% if review.rating|add:"0" >= 4 %}<span style="color: #FFBE00">&#9733;</span>{% else %}<span style="color: rgb(10,10,10,0.6)">&#9733;</span>{% endif %}
+                        {% if review.rating|add:"0" >= 5 %}<span style="color: #FFBE00">&#9733;</span>{% else %}<span style="color: rgb(10,10,10,0.6)">&#9733;</span>{% endif %}
+                    </span>
+                <div id="Reviews-Box-Content-Message">
+                    <p>"{{ review.message }}"</p>
+                </div>
+                </div>
+        {% endfor %}
+    </div>
+</div>
+<div class="Footer">
+    <div class="Footer-Column">
+        <p class="Footer-Column-Title">Social Media</p>
+        <div class="Footer-Column-Social">
+            <img src="{% static 'images/in.png' %}">
+            <p class="Footer-Column-Text">@NautilusLaw</p>
+        </div>
+        <div class="Footer-Column-Social">
+            <img src="{% static 'images/fb.png' %}">
+            <p class="Footer-Column-Text">@NautilusLaw</p>
+        </div>
+        <div class="Footer-Column-Social">
+            <img src="{% static 'images/x.png' %}">
+            <p class="Footer-Column-Text">@NautilusLaw</p>
+        </div>
+        <div class="Footer-Column-Social">
+            <img src="{% static 'images/insatgram.png' %}">
+            <p class="Footer-Column-Text">@NautilusLaw</p>
+        </div>
+    </div>
+    <div class="Footer-Column">
+        <p class="Footer-Column-Title">Links</p>
+        <a href="{% url 'MainPage' %}" >Home</a>
+        <a href="{% url 'LandingPage' %}" >About Us</a>
+        <a href="{% url 'ReviewPage' %}" >Reviews</a>
+        <a href="{% url 'TeamPage' %}" >Team</a>
+        <a href="{% url 'PricingPage' %}" >Pricing</a>
+        <a href="{% url 'ConsultationPage' %}" >Consultation</a>
+    </div>
+    <div class="Footer-Column">
+        <p class="Footer-Column-Title">Locations</p>
+        <p class="Footer-Column-Location">London</p>
+        <p class="Footer-Column-Text">41 Thomas More St<br>E1W 1YY</p>
+        <p class="Footer-Column-Location">Manchester</p>
+        <p class="Footer-Column-Text">House, Bridge St<br>M3 3BN</p>
+        <p class="Footer-Column-Location">Birmingham</p>
+        <p class="Footer-Column-Text">210 High St, Harborne<br>B17 9PP</p>
+    </div>
+    <div class="Footer-Column">
+        <p class="Footer-Column-Title">Contacts</p>
+        <p class="Footer-Column-Text">24/7 Help line:</p>
+        <p class="Footer-Column-Phone">+44 7464 57844</p>
+        <p class="Footer-Column-Text">consultations@nautiluslaw.com</p>
+    </div>
+</div>
+</body>
+</html>
