@@ -42,7 +42,7 @@ INSTALLED_APPS = [
     'nautilus_app',
 ]
 
-STATIC_ROOT = BASE_DIR / 'static'
+STATIC_ROOT = BASE_DIR / 'staticfiles'
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
