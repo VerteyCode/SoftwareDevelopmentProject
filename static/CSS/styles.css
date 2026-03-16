@@ -3,6 +3,27 @@
     src: url("../Fonts/Inter/Inter-VariableFont_opsz,wght.ttf");
 }
 
+@media (max-width: 1200px) {
+    #Reviews-Container{
+        padding: 100px 20px 200px 20px !important;
+    }
+
+    #Reviews-Box{
+        padding: 40px !important;
+    }
+
+
+    #NewReview-Container{
+        margin: -100px 20px 100px 20px  !important;
+    }
+
+    #Consultation-Container{
+        margin: -100px 20px 200px 20px  !important;
+    }
+
+}
+
+
 html {
     scrollbar-gutter: stable;
 }
@@ -17,7 +38,7 @@ body {
     position: sticky;
     top: 0;
     margin-top: 0;
-    background-color: #131A47;
+    background-color: #0A102E;
     font-family: "Gill Sans MT";
     padding: 15px;
     display: flex;
@@ -372,7 +393,7 @@ body {
 }
 
 #Consultation-Box{
-    padding: 80px 40px;
+    padding: 80px;
     border-radius: 15px;
     background-color: #386ABA;
     box-shadow: 0 5px 20px rgba(0,0,0,0.2);
@@ -432,6 +453,7 @@ body {
 
 #Consultation-Box textarea{
     resize: none;
+    min-width: 250px;
     width: 100%;
     height: 100%;
     margin-bottom: 20px;
@@ -502,6 +524,7 @@ body {
 .Team-Box img{
     aspect-ratio: 1 / 1;
     border-radius: 50%;
+    object-fit: cover;
 }
 
 .Team-Box-Name{
