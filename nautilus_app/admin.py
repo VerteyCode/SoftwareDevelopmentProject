@@ -1,3 +1,7 @@
 from django.contrib import admin
 
-# Register your models here.
+from .models import NautilusTeamModel, NautilusReviewModel, NautilusConsultationModel
+
+admin.site.register(NautilusTeamModel)
+admin.site.register(NautilusReviewModel)
+admin.site.register(NautilusConsultationModel)
