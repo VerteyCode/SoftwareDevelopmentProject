@@ -42,6 +42,8 @@ INSTALLED_APPS = [
     'nautilus_app',
 ]
 
+STATIC_ROOT = BASE_DIR / 'static'
+
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
