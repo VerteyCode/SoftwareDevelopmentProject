@@ -7,7 +7,6 @@ class NautilusReviewModel(models.Model):
     message = models.TextField(db_column='Message')
     rating = models.CharField(db_column='Rating', max_length=20)
     class Meta:
-        managed = False
         db_table = 'reviews'
 
 class NautilusConsultationModel(models.Model):
@@ -19,7 +18,6 @@ class NautilusConsultationModel(models.Model):
     message = models.TextField(db_column='Message')
     lawType = models.CharField(db_column='LawType', max_length=20)
     class Meta:
-        managed = False
         db_table = 'consultation'
 
 class NautilusTeamModel(models.Model):
@@ -29,5 +27,4 @@ class NautilusTeamModel(models.Model):
     lawField = models.CharField(db_column='LawField', max_length=20)
     teamPhoto = models.CharField(db_column='TeamPhoto', max_length=255)
     class Meta:
-        managed = False
         db_table = 'team'

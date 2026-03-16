@@ -79,7 +79,7 @@ WSGI_APPLICATION = 'DjangoProject.wsgi.application'
 
 DATABASES = {
     'default': dj_database_url.config(
-        default='mysql://root:Password123.@localhost:3306/nautilus',
+        default='sqlite:///db.sqlite3',
         conn_max_age=600,
     )
 }
