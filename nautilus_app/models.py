@@ -1,7 +1,7 @@
 from django.db import models
 
 class NautilusReviewModel(models.Model):
-    reviewid = models.IntegerField(db_column='ReviewID', primary_key=True)
+    reviewid = models.AutoField(db_column='ReviewID', primary_key=True)
     firstname = models.CharField(db_column='Firstname', max_length=20)
     lastname = models.CharField(db_column='Lastname', max_length=20)
     message = models.TextField(db_column='Message')
