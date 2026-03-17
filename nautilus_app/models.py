@@ -10,7 +10,7 @@ class NautilusReviewModel(models.Model):
         db_table = 'reviews'
 
 class NautilusConsultationModel(models.Model):
-    ConsultationID = models.IntegerField(db_column='ConsultationID', primary_key=True)
+    ConsultationID = models.AutoField(db_column='ConsultationID', primary_key=True)
     firstname = models.CharField(db_column='Firstname', max_length=20)
     lastname = models.CharField(db_column='Lastname', max_length=20)
     email = models.CharField(db_column='Email', max_length=50)
