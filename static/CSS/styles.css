@@ -78,7 +78,7 @@ body {
 
 .NavBar-Consultation {
     font-weight: bold;
-    background-color: #F28950;
+    background-color: #E67D39;
     margin-left: 20px;
     padding: 10px 15px;
     border-radius: 8px;
@@ -86,7 +86,7 @@ body {
 }
 
 .NavBar-Consultation:hover {
-    background-color: #E67D39;
+    background-color: #BF6029;
 }
 
 .NavBar-Consultation a{
@@ -321,7 +321,7 @@ body {
 #ReviewSubmit {
     padding: 18px 22px;
     border-radius: 15px;
-    background-color: #F28950;
+    background-color: #E67D39;
     color: #ffffff;
     border: none;
     font-size: 20px;
@@ -332,7 +332,7 @@ body {
 }
 
 #ReviewSubmit:hover {
-    background-color: #E67D39;
+    background-color: #BF6029;
 }
 
 #Reviews-Container{
@@ -492,7 +492,7 @@ body {
 #Consultation-Box-Submit-Button{
     padding: 18px 22px;
     border-radius: 15px;
-    background-color: #F28950;
+    background-color: #E67D39;
     color: #ffffff;
     border: none;
     font-size: 20px;
@@ -503,7 +503,7 @@ body {
 }
 
 #Consultation-Box-Submit-Button:hover {
-    background-color: #E67D39;
+    background-color: #BF6029;
 }
 
 #Team-Container{
