@@ -48,7 +48,7 @@
 <div id="Team-Container">
         {% for teams in NautilusTeam %}
             <div class="Team-Box">
-            <img src="{% static 'images/' %}{{ teams.teamPhoto }}.jpg">
+            <img src="{% static 'images/' %}{{ teams.teamPhoto }}.jpg" alt="{{ teams.firstname }} {{ teams.lastname }}">
             <p class="Team-Box-Name">{{ teams.firstname }} {{ teams.lastname }}</p>
             <p class="Team-Box-Law">{{ teams.lawField }}</p>
             </div>
@@ -58,19 +58,19 @@
     <div class="Footer-Column">
         <p class="Footer-Column-Title">Social Media</p>
         <div class="Footer-Column-Social">
-            <img src="{% static 'images/in.png' %}">
+            <img src="{% static 'images/in.png' %}" alt="LinkedIn">
             <p class="Footer-Column-Text">@NautilusLaw</p>
         </div>
         <div class="Footer-Column-Social">
-            <img src="{% static 'images/fb.png' %}">
+            <img src="{% static 'images/fb.png' %}" alt="FaceBook">
             <p class="Footer-Column-Text">@NautilusLaw</p>
         </div>
         <div class="Footer-Column-Social">
-            <img src="{% static 'images/x.png' %}">
+            <img src="{% static 'images/x.png' %}" alt="X">
             <p class="Footer-Column-Text">@NautilusLaw</p>
         </div>
         <div class="Footer-Column-Social">
-            <img src="{% static 'images/insatgram.png' %}">
+            <img src="{% static 'images/insatgram.png' %}" alt="Instagram">
             <p class="Footer-Column-Text">@NautilusLaw</p>
         </div>
     </div>
