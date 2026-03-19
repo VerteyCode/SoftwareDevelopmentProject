@@ -25,6 +25,5 @@ urlpatterns = [
     path('review/', views.ReviewPage, name='ReviewPage'),
     path('team/', views.TeamPage, name='TeamPage'),
     path('pricing/', views.PricingPage, name='PricingPage'),
-    path('landing/', views.LandingPage, name='LandingPage'),
 
 ]

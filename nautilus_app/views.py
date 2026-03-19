@@ -49,6 +49,3 @@ def TeamPage(request):
 
 def PricingPage(request):
     return render(request, 'PricingPage.html')
-
-def LandingPage(request):
-    return render(request, 'LandingPage.html')

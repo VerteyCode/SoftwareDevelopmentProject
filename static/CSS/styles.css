@@ -614,3 +614,66 @@ body {
     font-weight: bold;
     text-align: end;
 }
+
+#Main-Container{
+    margin: 150px 9%;
+    margin-top: -100px;
+    margin-bottom: 150px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+    justify-content: center;
+    gap: 75px;
+}
+
+.Main-Box{
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+    border-radius: 15px
+}
+
+
+.Main-Box-Header{
+    border-radius: 15px 15px 0 0;
+    background-color: #0A102E;
+    padding: 30px 50px;
+    text-align: center;
+    color: #ffffff;
+}
+
+.Main-Box-Body{
+    border-radius: 0 0 15px 15px;
+    padding: 50px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.Main-Box-Title{
+    margin: 0;
+    font-size: 45px;
+    font-weight: bold;
+}
+
+.Main-Box-Type{
+    margin: 0;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.Main-Box-Info{
+    margin: 0 0 30px 0;
+    font-size: 19px;
+}
+
+.Main-Box-Includes{
+    margin: 0 0 20px 0;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.Main-Box-Points{
+    margin: 0 0 20px 0;
+    font-size: 19px;
+
+}

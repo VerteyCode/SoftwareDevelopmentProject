@@ -8,7 +8,7 @@
 <body>
 <div class="NavBar">
     <div class="NavBar-Home">
-         <a href="{% url 'LandingPage' %}" >
+         <a href="{% url 'MainPage' %}" >
              Nautilus Law
              <img class="HomePageIcon" src="{% static 'images/homeButton.png' %}" alt="Home">
          </a>
@@ -40,9 +40,57 @@
     </div>
 </div>
 <div class="Header">
-    <h1>Home</h1>
-    <p>Our team is made up of the top quality industry leaders</p>
-    <p>With years of experience in a multitude of legal areas, we know how to win a case</p>
+    <h1>Welcome to Nautilus Law</h1>
+    <p>Ranked number 1 in the UK for civil and criminal law</p>
+    <p>and here is why we're perfect for you</p>
+</div>
+<div id="Main-Container">
+    <div class="Main-Box">
+        <div class="Main-Box-Header">
+            <p class="Main-Box-Title">Trust</p>
+            <p class="Main-Box-Type">We always put clients first</p>
+        </div>
+        <div class="Main-Box-Body">
+            <p class="Main-Box-Info">Our clients are our top priority here at Nautilus Law and we ensure everything from consultation to final court day is kept private and secure. Our reputation is known for having the most air-tight security and data security against 3rd party sites.</p>
+            <p class="Main-Box-Includes">Evidence:</p>
+            <ul>
+                <li class="Main-Box-Points">Reviews from previous clients</li>
+                <li class="Main-Box-Points">Zero data breaches</li>
+                <li class="Main-Box-Points">Secure system for access to consultation information</li>
+            </ul>
+        </div>
+    </div>
+    <div class="Main-Box">
+        <div class="Main-Box-Header">
+            <p class="Main-Box-Title">Action</p>
+            <p class="Main-Box-Type">Years of evidence and results</p>
+        </div>
+        <div class="Main-Box-Body">
+            <p class="Main-Box-Info">We have multiple top industry staff members with many years in the industry they have the tool-kit to win. This paired with our incredible intern and secretary team gives us the edge to shrive. More information can be found on the team page.</p>
+            <p class="Main-Box-Includes">Evidence:</p>
+            <ul>
+                <li class="Main-Box-Points">Positive track records with variety of cases</li>
+                <li class="Main-Box-Points">Multitude of advanced senior staff</li>
+                <li class="Main-Box-Points">Consantly improving service</li>
+                <li class="Main-Box-Points">Ranked number 1 in the UK and ireland for civil and criminal law fields</li>
+            </ul>
+        </div>
+    </div>
+    <div class="Main-Box">
+        <div class="Main-Box-Header">
+            <p class="Main-Box-Title">Clarity</p>
+            <p class="Main-Box-Type">We provide straightforward plans and advice</p>
+        </div>
+        <div class="Main-Box-Body">
+            <p class="Main-Box-Info">We believe in providing you with a clear timeline and actions to take control of your situation. We constantly advise on legal option and advice on your current situation and will always keep you updated on your ongoing cases</p>
+            <p class="Main-Box-Includes">Includes:</p>
+            <ul>
+                <li class="Main-Box-Points">Detailed legal plan</li>
+                <li class="Main-Box-Points">Zero hidden costs or fees</li>
+                <li class="Main-Box-Points">Collaborative approach to improve results</li>
+            </ul>
+        </div>
+    </div>
 </div>
 <div class="Footer">
     <div class="Footer-Column">
@@ -67,7 +115,6 @@
     <div class="Footer-Column">
         <p class="Footer-Column-Title">Links</p>
         <a href="{% url 'MainPage' %}" >Home</a>
-        <a href="{% url 'LandingPage' %}" >About Us</a>
         <a href="{% url 'ReviewPage' %}" >Reviews</a>
         <a href="{% url 'TeamPage' %}" >Team</a>
         <a href="{% url 'PricingPage' %}" >Pricing</a>
